@@ -77,7 +77,6 @@ df_lunares = df_fake.filter(col("tipo_evento") == "lunar").withColumn("año", ye
 
 # Agrupar por año y contar los eventos lunares con alias
 df_count_event = df_lunares.groupBy(col("año")).count().alias("total_eventos_lunares").withColumnRenamed("count", "total_eventos_lunares")
-print(df_count_event.show())
 
 # Guardar el resultado procesado en formato Parquet
 df_count_event.write.mode("overwrite").parquet(path_output)
