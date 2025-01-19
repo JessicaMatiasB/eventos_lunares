@@ -1,0 +1,27 @@
+Tabla de Hechos: Eventos_lunares
+id_evento_lunar: Id unico del evento (clave primaria)
+id_ubicacion: Id ubicacion del evento (clave foranea a Ubicacion)
+id_tipo_evento: Id tipo del evento (clave foranea a Evento)
+duracion: Duracion del evento minutos
+hora_evento: Hora del evento formato 24h
+clima_evento_temperatura: Estado de la atmosfera con respecto a la temperatura
+
+
+Tabla de Dimensiones: Ubicacion
+id_ubicacion: Id unico de la ubicacion (clave primaria de Unicacion)
+continente: Continenete en el que se presenta el evento
+region: Posicion en el territorio donde ocurrio el evento
+pais: Territorio
+ciudad: La ciudada del pais donde ocurrio el evento
+
+
+Tabla de Dimensiones: Evento
+id_evento: Id unico del evento
+nombre_evento: Nombre del evento tipo de evento [Eclipse penumbral, Eclipse parcial, Eclipse total]
+descripcion_evento: Descipcion del evento
+causa_evento: Descripcion de las causas del evento
+
+Justificacion del Diseño:
+Al descomponer los datos de una manera mas grafica me parece una forma mas simple de observar,
+y de comprender la relacion entre los datos ademas de que se pueden hacer consultas complejas de una manera mas simple
+Este tipo de diseño dimensional nos permite expandirlo sin modificar las consultas previas
