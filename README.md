@@ -191,3 +191,4 @@ Añade un título y una descripción para tu pull request.
 Haz clic en "Create pull request".
 
 ## 10. Mergeamos la PR desde GitHub
+Hacemos el merge de la PR desde GitHub
