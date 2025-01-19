@@ -190,4 +190,4 @@ Asegúrate de que la base branch es master y la compare branch es nueva_rama.
 Añade un título y una descripción para tu pull request.
 Haz clic en "Create pull request".
 
-## 10. Mergeamos la PR
+## 10. Mergeamos la PR desde GitHub
