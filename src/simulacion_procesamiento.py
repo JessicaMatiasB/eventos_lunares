@@ -11,7 +11,7 @@ fake = Faker()
 spark = SparkSession.builder.appName("Prueba tecnica").config("spark.sql.shuffle.partitions", "4").getOrCreate()
 
 # Definir el número de filas a generar
-num_filas = 10**7
+num_filas = 10**2
 
 # Funciónes UDF para generar el datset fake
 # Función UDF para generar UUID
@@ -55,14 +55,11 @@ df = df.withColumn("ubicacion", location_genrator())
 df = df.withColumn("detalles", details_generator())
 
 # Definir rutas relativas para guardar los archivos
-directorio_actual = os.path.dirname(__file__)
-carpeta_data = os.path.join(directorio_actual, "data")
-path = os.path.join(directorio_actual, "data")
-path_output = os.path.join(directorio_actual, "datamart")
-
-# Vericar de que la carpeta 'data' y 'datamart' existe
-os.makedirs(carpeta_data, exist_ok=True)
-os.makedirs(carpeta_data, exist_ok=True)
+directorio_actual = os.path.dirname(os.path.abspath(__file__))
+base_path = os.path.abspath(os.path.join(directorio_actual, '..'))
+carpeta_data = os.path.join(base_path, "data")
+path = os.path.join(base_path, "data")
+path_output = os.path.join(base_path, "datamart")
 
 df.write.mode("overwrite").parquet(path)
 
