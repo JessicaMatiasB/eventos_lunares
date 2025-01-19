@@ -93,6 +93,7 @@ En el repositorio de GitHub crear una nueva PR para integrar los cambios a main 
 Asegúrate de que la base branch es master y la compare branch es nueva_rama.
 
 Añade un título y una descripción para tu pull request.
+<<<<<<< HEAD
 Haz clic en "Create pull request".# Diseño y Flujo de Datos del Proyecto
 
 ==================
@@ -192,3 +193,4 @@ Haz clic en "Create pull request".
 
 ## 10. Mergeamos la PR desde GitHub
 Hacemos el merge de la PR desde GitHub
+
